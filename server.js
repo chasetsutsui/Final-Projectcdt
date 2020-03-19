@@ -15,10 +15,10 @@ app.use(express.json());
 app.use(routes);
 const db = require("./config/keys").mongoURI;
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://admin:7KZaMWL%4inP@ds015849.mlab.com:15849/heroku_m1kcxm85";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://chasetsutsui:<red16144>@ds059821.mlab.com:59821/heroku_29242c6l";
 console.log(MONGODB_URI);
 
-if(process.env.NODE_ENV === "production"){
+if (process.env.NODE_ENV === "production") {
 	app.use(express.static('client/build'));
 }
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
